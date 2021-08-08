@@ -140,8 +140,10 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(285496556) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1873723582) then
+elseif tonumber(user_id) == tonumber(335633714) then
 var = true  
+elseif tonumber(user_id) == tonumber(1873723582) then
+var = true
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
 elseif tonumber(user_id) == tonumber(bot_id) then
@@ -170,10 +172,12 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(285496556) then  
+if tonumber(user_id) == tonumber(285496556) then   
+var = 'مطور السورس'
+elseif tonumber(user_id) == tonumber(335633714) then
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(1873723582) then
-var = 'Telegram Developer'
+var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
 elseif database:sismember(bot_id.."DEV:Sudo:T", user_id) then 
@@ -2630,12 +2634,7 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
 Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ NIELS\n\n[⌯  NIELS ᴄʜᴀɴɴᴇʟ](http://t.me/link_niels)\n\n[⌯  ɪɴғᴏ sᴏᴜʀᴄᴇ](http://t.me/link_niels)\n\n[⌯  NIELS ᴅᴇᴠᴇʟᴏᴘᴇʀ](http://t.me/VVVZVV)\n\n[⌯  ʙᴏᴛ NIELS](http://t.me/vvvzvvbot)"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '⌯ sᴏᴜʀᴄʀ NIELS',url="t.me/link_niels/3"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/link_niels&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+send(msg.chat_id_, msg.id_,Text)
 end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
