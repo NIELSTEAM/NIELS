@@ -3,32 +3,51 @@ cd $HOME/NIELS
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x NIELS
-chmod +x Run
-./Run
+chmod +x niels
+chmod +x ts
+./ts
+}
+get() {
+rm -fr niels.lua
+rm -fr Info.lua
+wget "https://raw.githubusercontent.com/NIELSTEAM/NIELS/main/niels.lua"
+lua install.lua
 }
 installall(){
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install software-properties-common -y
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+apt update
+apt upgrade
+apt install dnsutils
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install tmux
+sudo apt-get install luarocks
+sudo apt-get install screen
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
+sudo apt-get update
+sudo apt-get install
+sudo apt-get install upstart-sysv
+wget http://luarocks.org/releases/luarocks-2.2.2.tar.gz;tar zxpf luarocks-2.2.2.tar.gz;cd luarocks-2.2.2 && ./configure
+sudo make bootstrap
 sudo luarocks install luasocket
 sudo luarocks install luasec
-sudo luarocks install redis-lua
-sudo luarocks install Lua-cURL
-sudo service redis-server start
-sudo apt-get update -y
-sudo apt-get install g++-4.7 -y c++-4.7
-sudo apt-get install libreadline-dev -y libconfig-dev -y libssl-dev -y lua5.2 -y liblua5.2-dev -y lua-socket -y lua-sec -y lua-expat -y libevent-dev -y make unzip git redis-server autoconf g++ -y libjansson-dev -y libpython-dev -y expat libexpat1-dev -y curl -y htop -y
-sudo apt-get install screen -y
+sudo apt-get install libconfig++9v5 -y 
 sudo apt-get install libstdc++6 -y
-sudo apt-get install lua-lgi -y
-sudo apt-get install libnotify-dev -y
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y 
+sudo apt-get install lua-lgi -y  
+sudo apt-get install libnotify-dev -y 
+sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev -y
+sudo apt-get update 
+sudo apt-get upgrade -y
 }
-if [ "$1" = "ok" ]; then
+if [ "$1" = "ins" ]; then
 install
 fi
+if [ "$1" = "get" ]; then
+get
+fi
 installall
-
+cd ..
+rm -rf luarocks*
+cd NIELS
+rm -rf luarocks*
 lua install.lua
-
