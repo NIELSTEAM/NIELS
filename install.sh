@@ -46,8 +46,4 @@ if [ "$1" = "get" ]; then
 get
 fi
 installall
-cd ..
-rm -rf luarocks*
-cd NIELS
-rm -rf luarocks*
 lua install.lua
