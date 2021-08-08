@@ -2629,12 +2629,6 @@ end
 end,nil)   
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-local url,res = https.request('https://vvvzvv.ml/apiNIELS/NIELS.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.info ~= true then
-send(msg.chat_id_,msg.id_,'⌯︙شترك في قناة السورس اولآ @link_niels .')
-return false 
-end
 Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ NIELS\n\n[⌯  NIELS ᴄʜᴀɴɴᴇʟ](http://t.me/link_niels)\n\n[⌯  ɪɴғᴏ sᴏᴜʀᴄᴇ](http://t.me/link_niels)\n\n[⌯  NIELS ᴅᴇᴠᴇʟᴏᴘᴇʀ](http://t.me/VVVZVV)\n\n[⌯  ʙᴏᴛ NIELS](http://t.me/vvvzvvbot)"
 keyboard = {} 
 keyboard.inline_keyboard = {
