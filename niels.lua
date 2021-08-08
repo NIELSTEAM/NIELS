@@ -1121,7 +1121,7 @@ send(msg.chat_id_, msg.id_,'*⌯︙لا يمكنك تغيير المطور ال�
 end
 if text == 'تحديث السورس ⌯' and DevNIELSW(msg) then 
 os.execute('rm -rf NIELS.lua')
-os.execute('wget https://raw.githubusercontent.com/NIELS-TEAM/NIELS/main/NIELS.lua')
+os.execute('wget https://raw.githubusercontent.com/NIELSTEAM/NIELS/main/niels.lua')
 send(msg.chat_id_, msg.id_,' *⌯︙تم تحديث السورس* \n*⌯︙لديك اخر اصدار لسورس نيلز*\n*⌯︙الاصدار » { 2.8v}*')
 dofile('NIELS.lua')  
 end
