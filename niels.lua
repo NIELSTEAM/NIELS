@@ -2636,7 +2636,7 @@ end
 end,nil)   
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ NIELS\n\n[⌯  NIELS ᴄʜᴀɴɴᴇʟ](http://t.me/link_niels)\n\n[⌯  ɪɴғᴏ sᴏᴜʀᴄᴇ](http://t.me/link_niels)\n\n[⌯  NIELS ᴅᴇᴠᴇʟᴏᴘᴇʀ](http://t.me/VVVZVV)\n\n[⌯  ʙᴏᴛ NIELS](http://t.me/vvvzvvbot)"
+Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ NIELS\n\n[⌯  NIELS ᴄʜᴀɴɴᴇʟ](http://t.me/link_niels)\n\n[⌯  мσнαммα∂ αℓ-кнαℓι∂ү ᶰˢ](http://t.me/IM_KI)\n\n[⌯  Abood](http://t.me/eeeeeeB)\n\n[⌯  Albert Alsh ᶰˢ](http://t.me/PPP18)"
 send(msg.chat_id_, msg.id_,Text)
 end
 --------------------------------------------------------------------------------------------------------------
