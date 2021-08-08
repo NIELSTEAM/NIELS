@@ -1105,7 +1105,7 @@ UserName = "]]..data.username_..[["
 ]])
 A:close()
 database:del(bot_id.."Ed:DevBots")
-dofile('NIELS.lua')  
+dofile('niels.lua')  
 else
 send(msg.chat_id_,msg.id_, "*⌯︙عذرا صاحب الايدي لا يمتلك معرف ارسل ايدي اخر*")
 end
@@ -1120,10 +1120,10 @@ if text =='تغيير المطور الاساسي ⌯' and not SudoBot(msg) then
 send(msg.chat_id_, msg.id_,'*⌯︙لا يمكنك تغيير المطور الاساسي*')
 end
 if text == 'تحديث السورس ⌯' and DevNIELSW(msg) then 
-os.execute('rm -rf NIELS.lua')
+os.execute('rm -rf niels.lua')
 os.execute('wget https://raw.githubusercontent.com/NIELSTEAM/NIELS/main/niels.lua')
 send(msg.chat_id_, msg.id_,' *⌯︙تم تحديث السورس* \n*⌯︙لديك اخر اصدار لسورس نيلز*\n*⌯︙الاصدار » { 2.8v}*')
-dofile('NIELS.lua')  
+dofile('niels.lua')  
 end
 if text == 'الاصدار ⌯' and DevNIELSW(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -2319,10 +2319,10 @@ database:set(bot_id..'Num:Add:Bot',Num)
 send(msg.chat_id_, msg.id_,' *⌯︙تم تعيين عدد الاعضاء سيتم تفعيل الكروبات التي اعضائها اكثر من  >> {'..Num..'} عضو*')
 end
 if text == 'تحديث السورس' and DevNIELSW(msg) then 
-os.execute('rm -rf NIELS.lua')
+os.execute('rm -rf niels.lua')
 os.execute('wget https://raw.githubusercontent.com/NIELSTEAM/NIELS/main/niels.lua')
 send(msg.chat_id_, msg.id_,' *⌯︙تم تحديث السورس* \n*⌯︙لديك اخر اصدار لسورس نيلز*\n*⌯︙الاصدار » { 2.8v}*')
-dofile('NIELS.lua')  
+dofile('niels.lua')  
 end
 if text and text:match("^تغير الاشتراك$") and DevNIELSW(msg) then  
 database:setex(bot_id.."add:ch:jm" .. msg.chat_id_ .. "" .. msg.sender_user_id_, 360, true)  
@@ -3500,7 +3500,7 @@ send(msg.chat_id_, msg.id_,' *⌯︙تم فتح التكرار*')
 end
 ------------------------------------------------------------------------ امـيـر الـدلـيـم
 if text == 'تحديث' and DevNIELSW(msg) then
-dofile('NIELS.lua')  
+dofile('niels.lua')  
 send(msg.chat_id_, msg.id_, ' *⌯︙تم تحديث جميع الملفات*') 
 end 
 if text == ("مسح قائمه العام") and DevNIELSW(msg) then
@@ -3822,7 +3822,7 @@ local json_file, res = https.request("https://raw.githubusercontent.com/link_nie
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
-dofile('NIELS.lua')  
+dofile('niels.lua')  
 else
 send(msg.chat_id_, msg.id_," *⌯︙عذرا الملف لايدعم سورس نيلز* \n") 
 end
@@ -3844,7 +3844,7 @@ local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
 chek:close()
 send(msg.chat_id_, msg.id_,t) 
-dofile('NIELS.lua')  
+dofile('niels.lua')  
 else
 send(msg.chat_id_, msg.id_," *⌯︙عذرا الملف لايدعم سورس نيلز* \n") 
 end
