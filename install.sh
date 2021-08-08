@@ -3,7 +3,7 @@ cd $HOME/NIELS
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x niels
+chmod +x NIELS
 chmod +x ts
 ./ts
 }
