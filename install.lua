@@ -52,7 +52,7 @@ end ---ifnot
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
 print("::NIELS::")
-local RunBot = io.open("niels", 'w')
+local RunBot = io.open("NIELS", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
 cd $HOME/NIELS
@@ -72,7 +72,7 @@ cd $HOME/NIELS
 while(true) do
 rm -fr ../.telegram-cli
 screen -S NIELS -X kill
-screen -S NIELS ./niels
+screen -S NIELS ./NIELS
 done
 ]])
 RunTs:close()
