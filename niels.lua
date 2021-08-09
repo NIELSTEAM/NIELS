@@ -8699,7 +8699,7 @@ database:set(bot_id.."Set:array:Ssd"..msg.sender_user_id_..":"..msg.chat_id_,"dt
 return false
 end
 end
-if text == "حذف رد من متعدد" and Manager(msg) then
+if text == "حذف رد من متعدد" and Constructor(msg) then
 send(msg.chat_id_, msg.id_,"*⌯︙ارسل الكلمه الرد الاصليه*")
 database:set(bot_id.."Set:array:Ssd"..msg.sender_user_id_..":"..msg.chat_id_,"delrd")
 return false 
@@ -8723,7 +8723,7 @@ database:srem(bot_id..'List:array'..msg.chat_id_, text)
 return false
 end
 end
-if text == "حذف رد متعدد" and Manager(msg) then
+if text == "حذف رد متعدد" and Constructor(msg) then
 send(msg.chat_id_, msg.id_,"*⌯︙ارسل الكلمه التي تريد حذفها*")
 database:set(bot_id.."Set:array:rd"..msg.sender_user_id_..":"..msg.chat_id_,"delrd")
 return false 
@@ -8746,7 +8746,7 @@ text = " ⌯︙لا يوجد ردود متعدده"
 end
 send(msg.chat_id_, msg.id_,'['..text..']')
 end
-if text == ("مسح الردود المتعدده") and BasicConstructor(msg) and GetChannelMember(msg) then   
+if text == ("مسح الردود المتعدده") and Constructor(msg) and GetChannelMember(msg) then   
 local list = database:smembers(bot_id..'List:array'..msg.chat_id_)
 for k,v in pairs(list) do
 database:del(bot_id.."Add:Rd:array:Text"..v..msg.chat_id_)   
@@ -8754,7 +8754,7 @@ database:del(bot_id..'List:array'..msg.chat_id_)
 end
 send(msg.chat_id_, msg.id_," *⌯︙تم مسح الردود المتعدده*")
 end
-if text == "اضف رد متعدد" and Manager(msg) and GetChannelMember(msg) then   
+if text == "اضف رد متعدد" and Constructor(msg) and GetChannelMember(msg) then   
 send(msg.chat_id_, msg.id_,"*⌯︙ارسل الكلمه التي تريد اضافتها*")
 database:set(bot_id.."Set:array"..msg.sender_user_id_..":"..msg.chat_id_,true)
 return false 
@@ -9918,7 +9918,7 @@ local Teext =[[
 *⌯~⪼ الجهات*
 *⌯~⪼ الاشعارات*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -9976,7 +9976,7 @@ local Teext =[[
 *⌯~⪼ نسبه الحب*
 *⌯~⪼ ءall*
  *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10013,7 +10013,7 @@ local Teext =[[
 *⌯~⪼ وصف*
 *⌯~⪼ تكرار + عدد*
  *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10060,7 +10060,7 @@ local Teext =[[
 *⌯~⪼ امر *
 *⌯~⪼ الاوامر المضافه*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10109,7 +10109,7 @@ local Teext =[[
 *⌯~⪼ تغير امر الاوامر*
 *⌯~⪼ تغير امر م1 ~ الئ م10*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ 𝘛𝘌𝘓𝘈𝘕?? 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10177,7 +10177,7 @@ local Teext =[[
 *⌯~⪼ نسبه الكره*
 *⌯~⪼ نسبه الانوثه*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10234,7 +10234,7 @@ local Teext =[[
 *⌯~⪼ رفع + تنزيل ← الحاته*
 *⌯~⪼ تاك للحاتات*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10267,7 +10267,7 @@ local Teext =[[
 *⌯~⪼ اذاعه* 
 *⌯~⪼ ردود المطور *
  *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10353,7 +10353,7 @@ local Teext =[[
 *⌯~⪼ تنظيف المشتركين*
 *⌯~⪼ تنظيف الكروبات*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10400,7 +10400,7 @@ local Teext =[[
 *⌯~⪼ شنو رئيك بهاي بالرد*
 *⌯~⪼ تحب هذا*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels)
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -10433,7 +10433,7 @@ local Teext =[[
 *⌯م9 ◂ اوامر مطور الاساسي* 
 *⌯م10 ◂ اوامر الاعضاء*
 *ٴ•━━━━━━ NS ━━━━━━━•*
-[⍆ NIELS 𝘛𝘦𝘈𝘮](t.me/link_niels) 
+[⍆ Niles City ](t.me/link_niels)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
