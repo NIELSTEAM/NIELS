@@ -26,7 +26,7 @@ if io.open("libs/redis.lua","r") then
 io.close(io.open("libs/redis.lua","r"))
 print("done => redis.lua")
 else
-io.popen("cd libs && wget https://raw.githubusercontent.com/NIELS-TEAM/NIELS/main/libs/redis.lua") 
+io.popen("cd libs && wget https://raw.githubusercontent.com/NIELSTEAM/NIELS/main/libs/redis.lua") 
 print("end wget => redis.lua")
 end
 io.popen("mkdir File_Bot") 
@@ -34,7 +34,7 @@ if io.open("File_Bot/commands.lua","r") then
 io.close(io.open("File_Bot/commands.lua","r"))
 print("done => commands.lua")
 else
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/NIELS-TEAM/Files_NIELS/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/NIELSTEAM/Files_NIELS/main/File_Bot/commands.lua") 
 print("end wget => commands.lua")
 end
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
@@ -2636,7 +2636,7 @@ end
 end,nil)   
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-Text = "ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ sᴏᴜʀᴄʀ NIELS\n\n[⌯  NIELS ᴄʜᴀɴɴᴇʟ](http://t.me/link_niels)\n\n[⌯  мσнαммα∂ αℓ-кнαℓι∂ү ᶰˢ](http://t.me/IM_KI)\n\n[⌯  Abood](http://t.me/eeeeeeB)\n\n[⌯  Albert Alsh ᶰˢ](http://t.me/PPP18)"
+Text = "هذا الہسہورسہ خہاص بمطہور الہسہورسہ فُہقطہ!"
 send(msg.chat_id_, msg.id_,Text)
 end
 --------------------------------------------------------------------------------------------------------------
@@ -3782,7 +3782,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevNIELSW(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/link_niels/Files_NIELS/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/NIELSTEAM/Files_NIELS/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -3820,7 +3820,7 @@ t = " *⌯︙الملف »* "..file.."\n*⌯︙تم تعطيل ملف* \n"
 else
 t = " *⌯︙بالتاكيد تم تعطيل ملف →* "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/link_niels/Files_NIELS/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/NIELSTEAM/Files_NIELS/main/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -3840,7 +3840,7 @@ t = " *⌯︙بالتاكيد تم تفعيل ملف →* "..file.." \n"
 else
 t = " *⌯︙الملف »* "..file.."\n*⌯︙تم تفعيل ملف* \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/link_niels/Files_NIELS/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/NIELSTEAM/Files_NIELS/main/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
